@@ -49,6 +49,17 @@ def read_data():
 # Step 1a
 def plot_position(t, x, y, z):
     # TODO: create a figure with three subplots
+    fig,axs = plt.subplots(3,1, figsize=(8,6))
+    axs[0].plot(t, x)
+    axs[0].set_title("Position vs Time")   
+    axs[0].set_ylabel("X (m)") 
+    axs[1].plot(t, y)
+    axs[1].set_ylabel("Y (m)") 
+    axs[2].plot(t, z)
+    axs[2].set_xlabel("Time (s)")
+    axs[2].set_ylabel("Z (m)")
+    plt.tight_layout()
+    plt.show()
     pass
     
 # Plots the velocity (vx,vy,vz) vs time
@@ -58,6 +69,19 @@ def plot_position(t, x, y, z):
 #          vz = N-vector for z velocity
 # Step 1b
 def plot_velocity(t, vx, vy, vz):
+
+    fig,axs = plt.subplots(3,1, figsize=(8,6))
+    axs[0].plot(t, vx)
+    axs[0].set_title("Velocity vs Time")   
+    axs[0].set_ylabel("$V_x$ (m/s)") 
+    axs[1].plot(t, vy)
+    axs[1].set_ylabel("$V_y$ (m/s)") 
+    axs[2].plot(t, vz)
+    axs[2].set_xlabel("Time (s)")
+    axs[2].set_ylabel("$V_z$ (m/s)")
+    plt.tight_layout()
+    plt.show()
+
     # TODO: create a figure with three subplots
     pass
     
@@ -67,6 +91,21 @@ def plot_velocity(t, vx, vy, vz):
 #          where ||omega_axis|| = theta
 # Step 1c
 def plot_angle_axes(t, thetas, omega_axes_1, omega_axes_2, omega_axes_3):
+
+    fig,axs = plt.subplots(4,1, figsize=(8,6))
+    axs[0].plot(t, omega_axes_1)
+    axs[0].set_title("Orientation vs Time")   
+    axs[0].set_ylabel("$\omega_1$") 
+    axs[1].plot(t, omega_axes_2)
+    axs[1].set_ylabel("$\omega_2$ ") 
+    axs[2].plot(t, omega_axes_3)
+    axs[2].set_xlabel("Time (s)")
+    axs[2].set_ylabel("$\omega_3$ ")
+    axs[3].plot(t, thetas)
+    axs[3].set_xlabel("Time (s)")
+    axs[3].set_ylabel(r"$\theta$ (rad)")
+    plt.tight_layout()
+    plt.show()
     # TODO: create a figure with four subplots
     pass
     
@@ -76,6 +115,18 @@ def plot_angle_axes(t, thetas, omega_axes_1, omega_axes_2, omega_axes_3):
 # Step 1d
 def plot_body_angular_velocity(t, omega_body):
     omega_1, omega_2, omega_3 = omega_body[0,:], omega_body[1,:], omega_body[2,:]
+
+    fig,axs = plt.subplots(3,1, figsize=(8,6))
+    axs[0].plot(t, omega_1)
+    axs[0].set_title("Angular Velocity vs Time")   
+    axs[0].set_ylabel("$\omega_1^b$ (rad/s)") 
+    axs[1].plot(t, omega_2)
+    axs[1].set_ylabel("$\omega_2^b$ (rad/s)") 
+    axs[2].plot(t, omega_3)
+    axs[2].set_xlabel("Time (s)")
+    axs[2].set_ylabel("$\omega_3^b$ (rad/s)")
+    plt.tight_layout()
+    plt.show()
     # TODO: create a figure with three subplots
     pass
     
@@ -84,6 +135,13 @@ def plot_body_angular_velocity(t, omega_body):
 #          error = N-vector to plot
 # Step 1e
 def plot_error_metric(t, error):
+    plt.figure()
+    plt.plot(t, error)
+    plt.title("Squared Distance to Target Orientation")
+    plt.xlabel("time (s)")
+    plt.ylabel("$d^2$")
+    plt.tight_layout()
+    plt.show()
     # TODO: create a figure with one plot
     pass
 
@@ -95,6 +153,11 @@ def plot_error_metric(t, error):
 # returns:  vx, vy, vz (all N vectors)
 # step 1b
 def calculate_velocity(t, x, y, z):
+
+    vx = np.diff(x) / np.diff(t)
+    vy = np.diff(y) / np.diff(t)
+    vz = np.diff(z) / np.diff(t)
+
     pass
     # TODO: calculate the velocity using difference equation
     # Hint: np.diff()
@@ -104,18 +167,21 @@ def calculate_velocity(t, x, y, z):
     # vz = ...
 
     # append the last value to make the vectors the same length
-    # vx = np.append(vx, vx[-1])
-    # vy = np.append(vy, vy[-1])
-    # vz = np.append(vz, vz[-1])
-    #return vx, vy, vz
+    vx = np.append(vx, vx[-1])
+    vy = np.append(vy, vy[-1])
+    vz = np.append(vz, vz[-1])
+    return vx, vy, vz
     
 # Convert a 3-vector to a 3x3 skew symmetric matrix (hat operator)
 # input:  v = any 3-vector
 # output: W = 3x3 skew symmetric matrix such that W = hat(v)
 # Step 1c
 def VecToso3(v):
+    hat = np.array([0, -v[2], v[1], v[2], 0, -v[0], -v[1], v[0], 0])
+    final_hat = hat.reshape(3,3)
+    return final_hat
     # TODO: implement the hat operator
-    pass
+  
 
 # an alias for VecToso3
 # Step 1c
@@ -126,8 +192,13 @@ hat = VecToso3
 # returns:  v = 3-vector such that W = hat(v)
 # Step 1c
 def so3ToVec(W):
+    v1 = W[2,1]
+    v2 = W[0,2]
+    v3 = W[1,0]
+    v = np.array([v1,v2,v3])
+    return v 
     # TODO: implement the vee operator
-    pass
+
     
 
 # an alias for so3ToVec
@@ -169,33 +240,32 @@ def MatrixLog3(R):
         # case (b.1): when r33 != -1
         # note: in Python, R[2,2] = r33 because indexing starts from 0 instead of 1
         if not np.isclose(R[2,2], -1):
-            pass
-            # omega_1 = ...
-            # omega_2 = ...
-            # omega_3 = ...
+            omega_1 = R[0,2] / np.sqrt(2 * (1 + R[2,2]))
+            omega_2 = R[1,2] / np.sqrt(2 * (1 + R[2,2]))
+            omega_3 = (1 + R[2,2]) / np.sqrt(2 * (1 + R[2,2]))
         
         # case (b.2): when r22 != -1
         elif not np.isclose(R[1,1], -1):
-            pass
-            # omega_1 = ...
-            # omega_2 = ...
-            # omega_3 = ...
+            omega_1 = R[0,1] / np.sqrt(2 * (1 + R[1,1]))
+            omega_2 = (1 + R[1,1]) / np.sqrt(2 * (1 + R[1,1]))
+            omega_3 = R[2,1] / np.sqrt(2 * (1 + R[1,1]))
 
         # case (b.3): when r11 != -1
         else:
             pass
-            # omega_1 = ...
-            # omega_2 = ...
-            # omega_3 = ...
+            omega_1 = (1 + R[0,0]) / np.sqrt(2 * (1 + R[0,0]))
+            omega_2 = R[1,0] / np.sqrt(2 * (1 + R[0,0]))
+            omega_3 = R[2,0] / np.sqrt(2 * (1 + R[0,0]))
         
     # case (c): the "typical" case
     else:
         pass
-        # theta = ...
-        # omega_1 = ...
-        # omega_2 = ...
-        # omega_3 = ...
+        theta = np.arccos((np.trace(R) -  1) / 2)
+        omega_1 = (R[2,1] - R[1,2]) / (2 * np.sin(theta))
+        omega_2 = (R[0,2] - R[2,0]) / (2 * np.sin(theta))
+        omega_3 = (R[1,0] - R[0,1]) / (2 * np.sin(theta))
 
+    omega_axis = np.array([omega_1,omega_2,omega_3])
     return hat(theta * omega_axis)
 
 
@@ -204,6 +274,13 @@ def MatrixLog3(R):
 # returns:  omega_axis = normalized 3-vector
 #           theta = scalar
 def AngleAxis3(expc3):
+
+    theta = np.linalg.norm(expc3)
+
+    if theta == 0: 
+        omega_axis = np.zeros(3)
+    else:
+        omega_axis = expc3 / theta 
     # TODO: complete the implementation
     # theta = ...
     # remember to check for the condition that ||ecpc3|| = 0
@@ -221,7 +298,28 @@ def AngleAxis3(expc3):
 def calculate_angle_axes(Rs):
     # TODO: complete the implementation
     N = np.size(Rs,2)
-    pass
+
+    thetas = np.zeros(N)
+    omega_axes_1 = np.zeros(N)
+    omega_axes_2 = np.zeros(N)
+    omega_axes_3 = np.zeros(N)
+
+    for i in range(N):
+        R = Rs[:, :, i]
+
+        log_R = MatrixLog3(R)
+
+        expc3 = so3ToVec(log_R)
+
+        omega_axis, theta = AngleAxis3(expc3)
+        thetas[i] = theta
+
+        omega_axes_1[i] = omega_axis[0]
+
+        omega_axes_2[i] = omega_axis[1]
+
+        omega_axes_3[i] = omega_axis[2]
+
     return thetas, omega_axes_1, omega_axes_2, omega_axes_3
 
 # Calculate the angular velocity of the metafly in the body frame
@@ -230,14 +328,17 @@ def calculate_angle_axes(Rs):
 # returns:  omega_body = 3xN angular velocity vector in the body frame
 # Step 1d
 def calculate_body_angular_velocity(t, Rs):
-    # TODO: complete the implementation
-    N = np.size(Rs,2)
-    # reminder: R(ti)^T = Rs[:,:,i].T
-    # reminder: R(ti+1) = Rs[:,:,i+1]
-    # reminder: matrix multiplication is denoted with @
-    pass
+    N = np.size(Rs, 2)
+    omega_body = np.zeros((3, N))
+
+    for i in range(N - 1):
+        R_relative = Rs[:, :, i].T @ Rs[:, :, i+1]
+        log_R = MatrixLog3(R_relative)
+        omega_body[:, i] = so3ToVec(log_R) / (t[i+1] - t[i])
+
+    omega_body[:, -1] = omega_body[:, -2]
+
     return omega_body
-    
 
 # Calculate the error metric
 # input:    Rs = 3x3xN rotation matrices
@@ -245,8 +346,12 @@ def calculate_body_angular_velocity(t, Rs):
 # returns:  error = N-vector
 # Step 1e
 def calculate_error(Rs, Rds):
-    # TODO: complete the implementation
-    pass
+    N = np.size(Rs, 2)
+    error = np.zeros(N)
+
+    for i in range(N):
+        error[i] = (np.linalg.norm(Rs[:, :, i] - Rds[:, :, i]) ** 2)
+
     return error
     
 
@@ -257,11 +362,11 @@ def main():
     # (a) read the csv file
     t, x, y, z, roll, pitch, yaw = read_data()
     N = np.size(t)
-    # plot_position(t, x, y, z) # uncomment when you are ready
+    plot_position(t, x, y, z) # uncomment when you are ready
     
     # (b) calculate velocity
-    # vx, vy, vz = calculate_velocity(t, x, y, z) # uncomment when you are ready
-    # plot_velocity(t, vx, vy, vz) # uncomment when you are ready
+    vx, vy, vz = calculate_velocity(t, x, y, z) # uncomment when you are ready
+    plot_velocity(t, vx, vy, vz) # uncomment when you are ready
     
     # calculate all of the rotation matrices
     # (this is done for you :)
@@ -270,12 +375,12 @@ def main():
         Rs[:,:,i] = calculate_R(yaw[i], pitch[i], roll[i])
 
     # (c) calculate the angle-axis representation for each R = expm(expc3)
-    # thetas, omega_axes_1, omega_axes_2, omega_axes_3 = calculate_angle_axes(Rs) # uncomment when you are ready
-    # plot_angle_axes(t, thetas, omega_axes_1, omega_axes_2, omega_axes_3) # uncomment when you are ready
+    thetas, omega_axes_1, omega_axes_2, omega_axes_3 = calculate_angle_axes(Rs) # uncomment when you are ready
+    plot_angle_axes(t, thetas, omega_axes_1, omega_axes_2, omega_axes_3) # uncomment when you are ready
     
     # (d) calculate the angular velocity in the body frame
-    # omega_body = calculate_body_angular_velocity(t, Rs) # uncomment when you are ready
-    # plot_body_angular_velocity(t, omega_body) # uncomment when you are ready
+    omega_body = calculate_body_angular_velocity(t, Rs) # uncomment when you are ready
+    plot_body_angular_velocity(t, omega_body) # uncomment when you are ready
     
     # (e) calculate the error metric
     # We set Rd = the last rotation matrix in R
@@ -284,8 +389,8 @@ def main():
     for i in range(np.size(Rs,2)):
         Rds[:,:,i] = Rs[:,:,-1]
 
-    # error = calculate_error(Rs, Rds) # uncomment when you are ready
-    # plot_error_metric(t, error) # uncomment when you are ready
+    error = calculate_error(Rs, Rds) # uncomment when you are ready
+    plot_error_metric(t, error) # uncomment when you are ready
     
 
 if __name__ == "__main__":
