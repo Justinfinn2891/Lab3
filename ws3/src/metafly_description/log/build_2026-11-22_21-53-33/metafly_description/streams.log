@@ -1,0 +1,30 @@
+[2.300s] Invoking command in '/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description': PYTHONPATH=/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/build --no-deps symlink_data
+[2.891s] running develop
+[3.119s] running egg_info
+[3.120s] creating metafly_description.egg-info
+[3.133s] writing metafly_description.egg-info/PKG-INFO
+[3.138s] writing dependency_links to metafly_description.egg-info/dependency_links.txt
+[3.142s] writing requirements to metafly_description.egg-info/requires.txt
+[3.144s] writing top-level names to metafly_description.egg-info/top_level.txt
+[3.147s] writing manifest file 'metafly_description.egg-info/SOURCES.txt'
+[3.216s] reading manifest file 'metafly_description.egg-info/SOURCES.txt'
+[3.255s] writing manifest file 'metafly_description.egg-info/SOURCES.txt'
+[3.276s] running build_ext
+[3.278s] Creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/lib/python3.12/site-packages/metafly-description.egg-link (link to .)
+[3.296s] 
+[3.296s] Installed /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description
+[3.299s] running symlink_data
+[3.305s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/ament_index
+[3.307s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/ament_index/resource_index
+[3.309s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/ament_index/resource_index/packages
+[3.320s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/resource/metafly_description -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/ament_index/resource_index/packages
+[3.333s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/package.xml -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description
+[3.340s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description/launch
+[3.350s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/launch/view_metafly.launch.py -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description/launch
+[3.359s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description/rviz
+[3.370s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/rviz/metafly.rviz -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description/rviz
+[3.379s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description/urdf
+[3.390s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/urdf/materials.xacro -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description/urdf
+[3.405s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/urdf/metafly.urdf.xacro -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description/urdf
+[3.418s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/urdf/metafly_macro.xacro -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/share/metafly_description/urdf
+[3.442s] Invoked command in '/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description' returned '0': PYTHONPATH=/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/install/metafly_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/src/metafly_description/build/metafly_description/build --no-deps symlink_data

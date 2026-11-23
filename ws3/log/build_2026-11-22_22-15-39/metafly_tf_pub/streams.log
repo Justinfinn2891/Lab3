@@ -1,0 +1,17 @@
+[3.838s] Invoking command in '/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/build/metafly_tf_pub': PYTHONPATH=/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/build/metafly_tf_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/install/metafly_tf_pub/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/build/metafly_tf_pub/build --no-deps symlink_data
+[4.913s] running develop
+[5.304s] running egg_info
+[5.324s] writing metafly_tf_pub.egg-info/PKG-INFO
+[5.327s] writing dependency_links to metafly_tf_pub.egg-info/dependency_links.txt
+[5.330s] writing entry points to metafly_tf_pub.egg-info/entry_points.txt
+[5.333s] writing requirements to metafly_tf_pub.egg-info/requires.txt
+[5.335s] writing top-level names to metafly_tf_pub.egg-info/top_level.txt
+[5.412s] reading manifest file 'metafly_tf_pub.egg-info/SOURCES.txt'
+[5.474s] writing manifest file 'metafly_tf_pub.egg-info/SOURCES.txt'
+[5.513s] running build_ext
+[5.514s] Creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/install/metafly_tf_pub/lib/python3.12/site-packages/metafly-tf-pub.egg-link (link to .)
+[5.531s] Installing metafly_tf_pub script to /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/install/metafly_tf_pub/lib/metafly_tf_pub
+[5.550s] 
+[5.551s] Installed /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/build/metafly_tf_pub
+[5.553s] running symlink_data
+[5.635s] Invoked command in '/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/build/metafly_tf_pub' returned '0': PYTHONPATH=/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/build/metafly_tf_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/install/metafly_tf_pub/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/ws3/build/metafly_tf_pub/build --no-deps symlink_data

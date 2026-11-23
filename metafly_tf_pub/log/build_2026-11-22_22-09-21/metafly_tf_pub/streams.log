@@ -1,0 +1,25 @@
+[2.415s] Invoking command in '/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub': PYTHONPATH=/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub/build --no-deps symlink_data
+[2.990s] running develop
+[3.225s] running egg_info
+[3.226s] creating metafly_tf_pub.egg-info
+[3.240s] writing metafly_tf_pub.egg-info/PKG-INFO
+[3.245s] writing dependency_links to metafly_tf_pub.egg-info/dependency_links.txt
+[3.248s] writing entry points to metafly_tf_pub.egg-info/entry_points.txt
+[3.251s] writing requirements to metafly_tf_pub.egg-info/requires.txt
+[3.254s] writing top-level names to metafly_tf_pub.egg-info/top_level.txt
+[3.257s] writing manifest file 'metafly_tf_pub.egg-info/SOURCES.txt'
+[3.315s] reading manifest file 'metafly_tf_pub.egg-info/SOURCES.txt'
+[3.353s] writing manifest file 'metafly_tf_pub.egg-info/SOURCES.txt'
+[3.374s] running build_ext
+[3.376s] Creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/lib/python3.12/site-packages/metafly-tf-pub.egg-link (link to .)
+[3.394s] Installing metafly_tf_pub script to /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/lib/metafly_tf_pub
+[3.408s] 
+[3.409s] Installed /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub
+[3.411s] running symlink_data
+[3.418s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/share/ament_index
+[3.420s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/share/ament_index/resource_index
+[3.423s] creating /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/share/ament_index/resource_index/packages
+[3.434s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub/resource/metafly_tf_pub -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/share/ament_index/resource_index/packages
+[3.448s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub/package.xml -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/share/metafly_tf_pub
+[3.461s] symbolically linking /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub/resource/mocap_data.csv -> /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/share/metafly_tf_pub
+[3.487s] Invoked command in '/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub' returned '0': PYTHONPATH=/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/install/metafly_tf_pub/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/justi/OneDrive/Desktop/hw10_data/hw10_data/Lab3/metafly_tf_pub/build/metafly_tf_pub/build --no-deps symlink_data
